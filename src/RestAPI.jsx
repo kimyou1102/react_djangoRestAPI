@@ -26,6 +26,15 @@ const RestAPI = () => {
                     <div key={text.id}>
                         <h2 style={{'display' : 'inline'}}>{text.title}</h2>
                         <Link to={`/update/`+text.id}><button>수정</button></Link>
+                        <button onClick={() => {
+                            axios.delete(`https://glacial-temple-96682.herokuapp.com/test/${text.id}/`)
+                            .then(() => {
+                                console.log('삭제 완');
+                            })
+                            .catch(() => {
+                                console.log('삭제에러');
+                            })
+                        }}>삭제</button>
                         <p>{text.content}</p>
                         <p>{text.updated_at}</p>
                     </div>
