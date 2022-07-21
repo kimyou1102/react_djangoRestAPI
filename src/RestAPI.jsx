@@ -28,7 +28,6 @@ const RestAPI = () => {
   return (
     <>
       <h1>REAT API 연습</h1>
-
       <input type="text" name="title" onChange={onChange} />
       <br />
       <input type="text" name="content" onChange={onChange} />
